@@ -5,21 +5,28 @@ import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 public class Main {
 
     public static void main(String[] args) {
-        int number = 5;
-        int finishNumber = 200;
+        int number = 1;
+        int finishNumber = 20;
+        int evensFound = 0;
         while (number <= finishNumber){
             if (!isAnEvenNumber(number)){
                 number++;
+
                 continue;
             }
-            System.out.println("Even number " + number);
+            evensFound++;
+            if(evensFound == 5){
+                break;
+            }
+
+
             number++;
             System.out.println("Heeeloooo");
             System.out.println("GtHubTest");
         }
         //isAnEvenNumber();
 
-
+        System.out.println("Even number " + evensFound);
     }
 
 
